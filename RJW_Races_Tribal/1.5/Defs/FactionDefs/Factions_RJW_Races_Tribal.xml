@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <FactionDef ParentName="TribeBase" Name="RJW_Races_Tribe" Abstract="True">
+        <canSiege>false</canSiege>
+        <melaninRange>0~0.35</melaninRange>
+        <allowedArrivalTemperatureRange>10~55</allowedArrivalTemperatureRange>
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <xenotypeSet>
+            <xenotypeChances>
+                <RJW_Races_Tribal_Lesser_Succubus>0.5</RJW_Races_Tribal_Lesser_Succubus>
+                <RJW_Races_Tribal_Higher_Succubus>0.15</RJW_Races_Tribal_Higher_Succubus>
+                <RJW_Races_Tribal_Catgirl>0.35</RJW_Races_Tribal_Catgirl>
+            </xenotypeChances>
+        </xenotypeSet>
+		<pawnGroupMakers Inherit="False">
+            <li>
+                <kindDef>Combat</kindDef>
+                <options>
+                    <RJW_Races_Tribal_Catgirl_Pawn>5</RJW_Races_Tribal_Catgirl_Pawn>
+                    <RJW_Races_Tribal_Lesser_Succubus_Pawn>10</RJW_Races_Tribal_Lesser_Succubus_Pawn>
+					<RJW_Races_Tribal_Higher_Succubus_Pawn>3</RJW_Races_Tribal_Higher_Succubus_Pawn>
+                </options>
+            </li>
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <RJW_Races_Tribal_Settler>10</RJW_Races_Tribal_Settler>
+                    <RJW_Races_Tribal_Catgirl_Pawn>5</RJW_Races_Tribal_Catgirl_Pawn>
+					<RJW_Races_Tribal_Lesser_Succubus_Pawn>5</RJW_Races_Tribal_Lesser_Succubus_Pawn>
+					<RJW_Races_Tribal_Higher_Succubus_Pawn>1</RJW_Races_Tribal_Higher_Succubus_Pawn>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <RJW_Races_Tribal_Trader>1</RJW_Races_Tribal_Trader>
+                </traders>
+                <carriers>
+                    <Muffalo>4</Muffalo>
+                    <Dromedary>4</Dromedary>
+                    <Alpaca>4</Alpaca>
+                    <Elephant>2</Elephant>
+                </carriers>
+                <guards>
+                    <RJW_Races_Tribal_Settler>5</RJW_Races_Tribal_Settler>
+                    <RJW_Races_Tribal_Catgirl_Pawn>5</RJW_Races_Tribal_Catgirl_Pawn>
+					<RJW_Races_Tribal_Lesser_Succubus_Pawn>5</RJW_Races_Tribal_Lesser_Succubus_Pawn>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <RJW_Races_Tribal_Settler>5</RJW_Races_Tribal_Settler>
+                    <RJW_Races_Tribal_Catgirl_Pawn>5</RJW_Races_Tribal_Catgirl_Pawn>
+                    <RJW_Races_Tribal_Lesser_Succubus_Pawn>15</RJW_Races_Tribal_Lesser_Succubus_Pawn>
+					<RJW_Races_Tribal_Higher_Succubus_Pawn>10</RJW_Races_Tribal_Higher_Succubus_Pawn>
+                </options>
+            </li>
+        </pawnGroupMakers>
+    </FactionDef>
+
+    <FactionDef ParentName="RJW_Races_Tribe">
+        <defName>RJW_Races_TribeCivil</defName>
+        <label>peaceful succubi tribe</label>
+        <description>A tribe of peaceful succubi and catgirls that decided to join them.</description>
+        <disallowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+        </disallowedMemes>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>20</configurationListOrderPriority>
+        <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+		<factionIconPath>Settlement_Succubus_Icon</factionIconPath>
+		<colorSpectrum>
+    	    <li>(0.9, 0, 0.1)</li>
+			<li>(1, 0, 0)</li>
+    	</colorSpectrum>
+    </FactionDef>
+
+    <FactionDef ParentName="RJW_Races_Tribe">
+        <defName>RJW_Races_TribeHostile</defName>
+        <label>agressive succubi tribe</label>
+        <description>A tribe of agressive succubi and catgirls that decided to join them.</description>
+        <permanentEnemy>false</permanentEnemy>
+		<naturalEnemy>true</naturalEnemy>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+        </requiredMemes>
+        <factionIconPath>Settlement_Succubus_Icon</factionIconPath>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>21</configurationListOrderPriority>
+        <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+		<colorSpectrum>
+    	    <li>(0, 0, 1)</li>
+			<li>(0.1, 0, 0.9)</li>
+    	</colorSpectrum>
+    </FactionDef>
+	
+</Defs>
