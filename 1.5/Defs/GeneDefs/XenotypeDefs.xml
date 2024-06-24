@@ -80,6 +80,7 @@
 			<li>AptitudeStrong_Melee</li>
             <li>AptitudeStrong_Social</li>
 			<li>AptitudeTerrible_Intellectual</li>
+			<li MayRequire="archersaiter.rjw.traits">RJW_Traits_Playful_Sadist_Gene</li>
         </genes>
 	</XenotypeDef>
 	
@@ -112,6 +113,7 @@
             <li>AptitudeRemarkable_Social</li>
 			<li>AptitudePoor_Intellectual</li>
             <li>rjw_genes_pussyhealing</li>
+			<li MayRequire="archersaiter.rjw.traits">RJW_Traits_Brutal_Sadist_Gene</li>
         </genes>
 	</XenotypeDef>
 	
