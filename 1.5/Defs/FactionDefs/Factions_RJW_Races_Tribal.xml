@@ -78,6 +78,7 @@
         <disallowedMemes>
             <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+			<li MayRequire="rjw.sexperience.ideology">Rapist</li>
         </disallowedMemes>
         <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
         <configurationListOrderPriority>20</configurationListOrderPriority>
@@ -97,6 +98,7 @@
 		<naturalEnemy>true</naturalEnemy>
         <requiredMemes>
             <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+			<li MayRequire="rjw.sexperience.ideology">Rapist</li>
         </requiredMemes>
         <factionIconPath>Settlement_Succubus_Icon</factionIconPath>
         <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
