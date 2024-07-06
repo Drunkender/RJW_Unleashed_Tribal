@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-   
-   <PawnKindDef Name="RJW_Races_TribalPawnBase" ParentName="TribalBase">
+   <!--ParentName="TribalBase"-->
+   <PawnKindDef Abstract="True" Name="RJW_Races_TribalPawnBase">
         <defName>RJW_Races_TribalPawnBase</defName>
+		<race>Human</race>
+		<defaultFactionType>RJW_Races_TribeCivil</defaultFactionType>
+		<maxGenerationAge>60</maxGenerationAge>
+		<chemicalAddictionChance>0.05</chemicalAddictionChance>
+		<invNutrition>2.55</invNutrition>
+		<invFoodDef>Pemmican</invFoodDef>
 		<canBeSapper>true</canBeSapper>
 		<apparelTags>
 			<li>Neolithic</li>
 			<li>Apparel_PlateArmor</li>
 		</apparelTags>
         <requiredWorkTags>
-          <li>Violent</li>
+			<li>Violent</li>
         </requiredWorkTags>
 		<isFighter>true</isFighter>
 		<combatEnhancingDrugsChance>0.75</combatEnhancingDrugsChance>
@@ -30,8 +36,12 @@
 		<initialWillRange>15~25</initialWillRange>
         <initialResistanceRange>20~30</initialResistanceRange>
 		<combatPower>40</combatPower>
-        <apparelMoney>250~750</apparelMoney>
-        <weaponMoney>250~500</weaponMoney>
+		<!--<startingHediffs>
+			<li>
+				<def>PsychicAmplifier</def>
+				<severity>1</severity>
+			</li>
+		</startingHediffs>-->
     </PawnKindDef>
 
     <PawnKindDef Abstract="True" Name="RJW_Races_Tribal_Higher_Succubus_Pawn" ParentName="RJW_Races_TribalPawnBase">
@@ -45,8 +55,12 @@
 		<initialWillRange>25~35</initialWillRange>
         <initialResistanceRange>20~30</initialResistanceRange>
 		<combatPower>50</combatPower>
-        <apparelMoney>500~1000</apparelMoney>
-        <weaponMoney>500~1000</weaponMoney>
+		<!--<startingHediffs>
+			<li>
+			<def>PsychicAmplifier</def>
+			<severity>1</severity>
+			</li>
+		</startingHediffs>-->
     </PawnKindDef>
 
     <PawnKindDef Abstract="True" Name="RJW_Races_Tribal_Catgirl_Pawn" ParentName="RJW_Races_TribalPawnBase">
@@ -73,6 +87,7 @@
         <apparelMoney>250~500</apparelMoney>
         <weaponMoney>250~500</weaponMoney>
 		<isGoodBreacher>true</isGoodBreacher>
+		<isFighter>true</isFighter>
 		<weaponTags>
 			<!--li>GrenadeDestructive</li-->
 			<li>NeolithicMeleeDestructive</li>
@@ -89,6 +104,7 @@
         <apparelMoney>250~500</apparelMoney>
         <weaponMoney>250~500</weaponMoney>
 		<isGoodBreacher>true</isGoodBreacher>
+		<isFighter>true</isFighter>
 		<weaponTags>
 			<li>NeolithicRangedDecent</li>
 			<li>NeolithicRangedBasic</li>
@@ -113,6 +129,7 @@
     <PawnKindDef ParentName="RJW_Races_Tribal_Lesser_Succubus_Pawn">
         <defName>RJW_Races_Tribal_Warrior</defName>
         <label>lesser succubus fighter</label>
+		<isFighter>true</isFighter>
 		<initialWillRange>20~30</initialWillRange>
         <initialResistanceRange>25~35</initialResistanceRange>
 		<combatPower>45</combatPower>
@@ -142,13 +159,13 @@
 		</skills>
     </PawnKindDef>
 
-    <PawnKindDef ParentName="RJW_Races_Tribal_Higher_Succubus_Pawn">
+    <PawnKindDef ParentName="RJW_Races_Tribal_Higher_Succubus_Pawn" Name="RJW_Races_Tribal_Enforcer">
         <defName>RJW_Races_Tribal_Enforcer</defName>
         <label>higher succubus fighter</label>
 		<initialWillRange>40~50</initialWillRange>
         <initialResistanceRange>50~75</initialResistanceRange>
-		<combatPower>55</combatPower>
-		<factionLeader>true</factionLeader>
+		<combatPower>60</combatPower>
+		<isFighter>true</isFighter>
         <apparelMoney>500~2000</apparelMoney>
         <weaponMoney>500~2000</weaponMoney>
 		<forceWeaponQuality>Masterwork</forceWeaponQuality>
@@ -184,12 +201,55 @@
 			</li>
 		</specificApparelRequirements>
     </PawnKindDef>
+	
+	<PawnKindDef ParentName="RJW_Races_Tribal_Higher_Succubus_Pawn" Name="RJW_Races_Tribal_Chief">
+        <defName>RJW_Races_Tribal_Chief</defName>
+        <label>higher succubus chief</label>
+		<isFighter>true</isFighter>
+		<initialWillRange>60~80</initialWillRange>
+        <initialResistanceRange>60~85</initialResistanceRange>
+		<combatPower>70</combatPower>
+		<factionLeader>true</factionLeader>
+		<forceWeaponQuality>Legendary</forceWeaponQuality>
+		<itemQuality>Legendary</itemQuality>
+		<combatEnhancingDrugsChance>1</combatEnhancingDrugsChance>
+        <combatEnhancingDrugsCount>3</combatEnhancingDrugsCount>
+        <apparelMoney>3500~10000</apparelMoney>
+        <weaponMoney>2500~10000</weaponMoney>
+		<forcedTraits>
+			<li>Tough</li>
+			<li>Brawler</li>
+		</forcedTraits>
+		<weaponTags>
+			<li>LongSword</li>
+			<li>NeolithicRangedChief</li>
+			<li>MedievalMeleeAdvanced</li>
+		</weaponTags>
+		<apparelRequired>
+			<li>Apparel_PlateArmor</li>
+		</apparelRequired>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>20~30</range>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<range>20~30</range>
+			</li>
+		</skills>
+		<specificApparelRequirements>
+			<li>
+				<stuff>Plasteel</stuff>
+			</li>
+		</specificApparelRequirements>
+    </PawnKindDef>
 
 	<PawnKindDef ParentName="RJW_Races_TribalPawnBase">
         <defName>RJW_Races_Tribal_Settler</defName>
         <label>Succubi tribe settler</label>
         <combatPower>25</combatPower>
-        <isFighter>true</isFighter>
+        <isFighter>false</isFighter>
         <initialWillRange>5~10</initialWillRange>
         <initialResistanceRange>10~20</initialResistanceRange>
 		<apparelMoney>100~500</apparelMoney>
@@ -227,9 +287,9 @@
         </inventoryOptions>
 		<xenotypeSet>
             <xenotypeChances>
-                <RJW_Races_Tribal_Catgirl>40</RJW_Races_Tribal_Catgirl>
-				<RJW_Races_Tribal_Lesser_Succubus>50</RJW_Races_Tribal_Lesser_Succubus>
-				<RJW_Races_Tribal_Higher_Succubus>10</RJW_Races_Tribal_Higher_Succubus>
+                <RJW_Races_Tribal_Catgirl>0.40</RJW_Races_Tribal_Catgirl>
+				<RJW_Races_Tribal_Lesser_Succubus>0.50</RJW_Races_Tribal_Lesser_Succubus>
+				<RJW_Races_Tribal_Higher_Succubus>0.10</RJW_Races_Tribal_Higher_Succubus>
             </xenotypeChances>
         </xenotypeSet>
 		<weaponTags>

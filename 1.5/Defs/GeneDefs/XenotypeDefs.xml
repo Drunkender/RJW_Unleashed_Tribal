@@ -57,7 +57,7 @@
           <li>rjw_genes_seduce</li>
           <li>rjw_genes_naked_prowess</li>
           <li>rjw_genes_mechbreeder</li>
-          <li>rjw_genes_zoophile</li>
+          <!--<li>rjw_genes_zoophile</li>--> <!--do NOT use with rapist and vice-versa, buggy-->
           <li>rjw_genes_unbreakable</li>
           <li>rjw_genes_orgasm_rush</li>
           <li>rjw_genes_aphrodisiac_pheromones</li>

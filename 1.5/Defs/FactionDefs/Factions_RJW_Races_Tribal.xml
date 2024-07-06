@@ -1,12 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
     <FactionDef ParentName="TribeBase" Name="RJW_Races_Tribe" Abstract="True">
         <canSiege>false</canSiege>
         <melaninRange>0~0.35</melaninRange>
+		<pawnSingular>tribal</pawnSingular>
+		<pawnsPlural>tribals</pawnsPlural>
+		<leaderTitle>chief</leaderTitle>
         <allowedArrivalTemperatureRange>-10~60</allowedArrivalTemperatureRange>
-        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
-        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<raidLootMaker>TribeRaidLootMaker</raidLootMaker>
+		<techLevel>Neolithic</techLevel>
+		<raidCommonalityFromPointsCurve>
+			<points><li>(0, 1)</li></points>
+		</raidCommonalityFromPointsCurve>
+		<disallowedPrecepts>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_Mandatory</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_Mandatory</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+		</disallowedPrecepts>
+		<caravanTraderKinds>
+			<li>Caravan_Neolithic_BulkGoods</li>
+			<li>Caravan_Neolithic_WarMerchant</li>
+			<li>Caravan_Neolithic_Slaver</li>
+			<li>Caravan_Neolithic_ShamanMerchant</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Visitor_Neolithic_Standard</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Neolithic_Standard</li>
+		</baseTraderKinds>
+		<backstoryFilters>
+		<li>
+			<categories><li>Tribal</li></categories>
+		</li>
+		</backstoryFilters>
         <xenotypeSet>
             <xenotypeChances>
                 <RJW_Races_Tribal_Lesser_Succubus>0.5</RJW_Races_Tribal_Lesser_Succubus>
@@ -23,14 +56,24 @@
 				<li>(150000, 20000)</li>
             </points>
         </maxPawnCostPerTotalPointsCurve>
+		<raidLootValueFromPointsCurve>
+		<points>
+			<li>(35,     15)</li>
+			<li>(100,   120)</li>
+			<li>(1000,  500)</li>
+			<li>(2000,  800)</li>
+			<li>(4000, 1000)</li>
+		</points>
+		</raidLootValueFromPointsCurve>
 		<pawnGroupMakers Inherit="False">
             <li>
                 <kindDef>Combat</kindDef>
                 <options>
-                    <RJW_Races_Tribal_Breacher>10</RJW_Races_Tribal_Breacher>
-					<RJW_Races_Tribal_Fighter>10</RJW_Races_Tribal_Fighter>
-                    <RJW_Races_Tribal_Warrior>15</RJW_Races_Tribal_Warrior>
-					<RJW_Races_Tribal_Enforcer>25</RJW_Races_Tribal_Enforcer>
+                    <RJW_Races_Tribal_Breacher>5</RJW_Races_Tribal_Breacher>
+					<RJW_Races_Tribal_Fighter>5</RJW_Races_Tribal_Fighter>
+                    <RJW_Races_Tribal_Warrior>8</RJW_Races_Tribal_Warrior>
+					<RJW_Races_Tribal_Enforcer>12</RJW_Races_Tribal_Enforcer>
+					<RJW_Races_Tribal_Chief>1</RJW_Races_Tribal_Chief>
                 </options>
             </li>
             <li>
@@ -66,6 +109,7 @@
                     <RJW_Races_Tribal_Fighter>5</RJW_Races_Tribal_Fighter>
                     <RJW_Races_Tribal_Warrior>15</RJW_Races_Tribal_Warrior>
 					<RJW_Races_Tribal_Enforcer>10</RJW_Races_Tribal_Enforcer>
+					<RJW_Races_Tribal_Chief>1</RJW_Races_Tribal_Chief>
                 </options>
             </li>
         </pawnGroupMakers>
@@ -79,6 +123,7 @@
             <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
 			<li MayRequire="rjw.sexperience.ideology">Rapist</li>
+			<li MayRequire="rjw.sexperience.ideology">Necrophile</li>
         </disallowedMemes>
         <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
         <configurationListOrderPriority>20</configurationListOrderPriority>
@@ -99,6 +144,7 @@
         <requiredMemes>
             <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
 			<li MayRequire="rjw.sexperience.ideology">Rapist</li>
+			<li MayRequire="rjw.sexperience.ideology">Lewd</li>
         </requiredMemes>
         <factionIconPath>Settlement_Succubus_Icon</factionIconPath>
         <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
