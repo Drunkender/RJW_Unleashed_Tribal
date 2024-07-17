@@ -20,9 +20,9 @@
 					<li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
 					<implantDef>VPE_PsycastAbilityImplant</implantDef>
 					<initialLevel>1</initialLevel>
-					<statUpgradePoints>2~6</statUpgradePoints>
+					<statUpgradePoints>1~2</statUpgradePoints>
 					<unlockedPaths>
-						<VPE_Warlord>1~4|2~12</VPE_Warlord>
+						<VPE_Warlord>1~2|2~4</VPE_Warlord>
 					</unlockedPaths>
 					</li>
 					</modExtensions>
@@ -34,15 +34,33 @@
 					<modExtensions>
 					<li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
 					<implantDef>VPE_PsycastAbilityImplant</implantDef>
-					<initialLevel>5</initialLevel>
-					<statUpgradePoints>2~6</statUpgradePoints>
+					<initialLevel>2</initialLevel>
+					<statUpgradePoints>2~4</statUpgradePoints>
 					<unlockedPaths>
-						<VPE_Warlord>1~4|2~12</VPE_Warlord>
+						<VPE_Warlord>1~3|2~5</VPE_Warlord>
 					</unlockedPaths>
 					</li>
 					</modExtensions>
 					</value>
 				</li>
+				<li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[@Name="RJW_Races_Tribal_Warrior"]/combatPower</xpath>
+                    <value>
+                        <combatPower>90</combatPower>
+                    </value>
+                </li>
+				<li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[@Name="RJW_Races_Tribal_Enforcer"]/combatPower</xpath>
+                    <value>
+                        <combatPower>110</combatPower>
+                    </value>
+                </li>
+				<li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[@Name="RJW_Races_Tribal_Chief"]/combatPower</xpath>
+                    <value>
+                        <combatPower>120</combatPower>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>
