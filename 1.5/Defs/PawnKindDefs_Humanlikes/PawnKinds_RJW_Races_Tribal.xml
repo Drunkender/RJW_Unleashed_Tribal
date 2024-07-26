@@ -126,7 +126,7 @@
 		<forceWeaponQuality>Good</forceWeaponQuality>
     </PawnKindDef>
 	
-    <PawnKindDef ParentName="RJW_Races_Tribal_Lesser_Succubus_Pawn">
+    <PawnKindDef ParentName="RJW_Races_Tribal_Lesser_Succubus_Pawn" Name="RJW_Races_Tribal_Warrior">
         <defName>RJW_Races_Tribal_Warrior</defName>
         <label>lesser succubus fighter</label>
 		<isFighter>true</isFighter>
